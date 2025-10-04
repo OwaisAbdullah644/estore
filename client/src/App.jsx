@@ -12,6 +12,7 @@ import About from "./pages/About";
 import AddCategory from "./dashboard/AddCategory";
 import AddProduct from "./dashboard/AddProduct";
 import ProductTable from "./dashboard/ProductTable";
+import UpdateCategory from "./dashboard/UpdateCategory";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route path="categories" element={<Categories />}></Route>
             <Route path="categories/addcategory" element={<AddCategory />}></Route>
+            <Route path={`categories/updatecategories/:id`} element={<UpdateCategory />}></Route>
             <Route path="products" element={<ProductTable />}></Route>
             <Route path="products/addproducts" element={<AddProduct />}></Route>
 

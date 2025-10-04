@@ -7,7 +7,8 @@ const UserLogic = () => {
         name: "",
         email: "",
         password: "",
-        confirmPass: ""
+        confirmPass: "",
+        role : "user"
     })
 
     const handleChange = (e) => {
@@ -26,9 +27,7 @@ const UserLogic = () => {
             }
 
         try {
-            const registed = await axios.post("http://localhost:8080/register",{
-                    form
-            })
+            const registed = await axios.post("http://localhost:8080/register", form)
             console.log('Registerd')
             
         } catch (error) {
